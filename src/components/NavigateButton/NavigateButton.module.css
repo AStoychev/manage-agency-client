@@ -1,0 +1,32 @@
+.navigateButtonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 5px;
+}
+
+.navigateButton {
+    all: unset;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    min-width: 150px;
+    min-height: 36px;
+    
+    font-family: Poppins;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #368968;
+    transition: 0.3s;
+}
+
+.navigateButton:hover {
+    background-color: #297b28;
+}

@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-family: Poppins;
+}
+
+.container .haveUser {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.container .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    all: unset;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h4 {
+    all: unset;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container .sectionsWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 50px;
+}
+
+.container .sectionsWrapper .imageWrapper {
+    background-image: url('../../../public/img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 29%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.container .sectionsWrapper .imageWrapper img {
+    width: 300px;
+    height: 500px;
+}
+
+.container .sectionsWrapper .linksWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: auto;
+    gap: 30px;
+}
+
+@media (max-width: 1023px) {
+    .container .haveUser {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        all: unset;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        all: unset;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    .container .sectionsWrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .container .sectionsWrapper .imageWrapper {
+        background-image: url('../../../public/img/background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .sectionsWrapper .imageWrapper img {
+        width: 250px;
+        height: 400px;
+    }
+
+    .container .sectionsWrapper .linksWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 67%;
+        height: auto;
+        padding-left: 30px;
+    }
+}

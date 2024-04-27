@@ -1,0 +1,38 @@
+.loginButtonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 5px 10px 0 0;
+}
+
+.authButton {
+    all: unset;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    min-width: 150px;
+    min-height: 36px;
+    
+    font-family: Poppins;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #006EFD;
+    transition: 0.3s;
+}
+
+.authButton:hover {
+    background-color: #025bd1;
+}
+
+@media (max-width: 1023px) {
+    .loginButtonWrapper {
+        padding: 0
+    }
+}
