@@ -61,7 +61,7 @@ export default function LoginModal({ onCloseClick }: ModalProps) {
                     </div>
 
                     <button type='submit'>CONTINUE</button>
-                    <FcInfo className={styles.icon} title='DEFAULT USERS: username: User; password: test' />
+                    <FcInfo className={styles.icon} title='DEFAULT USERS&#010;username: User password: test &#010;username: Alice password: test &#010;username: John password: test' />
                 </form>
             </div>
         </div>

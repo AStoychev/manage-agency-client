@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { useForm } from '@/hooks/useForm';
-
 import { getLinkText } from '../../functions/getLinkText/getLinkText';
-import { LinkOne, LinkTwo, LinkThree } from '../../components/LinkContent/LinkOne';
+import { LinkOne, LinkTwo, LinkThree } from '../../components/LinkContent/LinkContent';
 
 import MainLinks from '../../components/MainLinks/MainLinks';
 import AuthButton from '../../components/AuthButton/AuthButton';
@@ -14,27 +13,13 @@ import GreetUser from '../../components/GreetUser/GreetUser';
 import styles from './Main.module.css';
 
 export default function Main() {
-    // const [isLoged, setIsLoged] = useState<boolean>(false);
     const [modal, setModal] = useState<boolean>(false);
 
     const { haveUser, isLoged, logout } = useForm();
 
-    // const haveUser = localStorage.getItem('auth')
-
     const onOpenClick = () => { setModal(true) };
     const onCloseClick = () => { setModal(false) };
-
     const onLogoutClick = () => { logout() }
-    // const onLogoutClick = () => {
-    //     localStorage.removeItem('auth')
-    //     setIsLoged(false)
-    // }
-
-    // useEffect(() => {
-    //     if (haveUser) {
-    //         setIsLoged(true)
-    //     }
-    // }, [haveUser])
 
     return (
         <div className={styles.container}>

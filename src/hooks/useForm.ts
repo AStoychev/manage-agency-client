@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const PORT:string = import.meta.env.VITE_API_PORT || '';
-// const PORT = 'http://localhost:3000/user/login'
 
 export const useForm = () => {
     const [serverResponce, setServerResponce] = useState<boolean>(false);
@@ -41,7 +40,6 @@ export const useForm = () => {
             }
             localStorage.setItem('auth', formData.username);
             const data = await response.json();
-            console.log('Login successful:', data);
             setServerResponce(true)
             navigate('/main');
         } catch (error) {

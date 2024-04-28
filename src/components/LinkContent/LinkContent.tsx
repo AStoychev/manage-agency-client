@@ -1,4 +1,4 @@
-import styles from './LinkStyle.module.css'
+import styles from './LinkContent.module.css';
 
 export const LinkOne = () => {
     return (
