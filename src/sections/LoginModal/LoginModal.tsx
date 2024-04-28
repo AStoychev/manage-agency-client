@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { useForm } from '../../hooks/useForm';
-
+import LoginError from '@/components/LoginError/LoginError';
 import { FcInfo } from "react-icons/fc";
 import styles from './LoginModal.module.css';
 
@@ -26,7 +26,7 @@ export default function LoginModal({ onCloseClick }: ModalProps) {
         <div>
             <div className={styles.overlay} onClick={onClickOutside}></div>
             <div className={styles.modal}>
-                    <button className={styles.closeButton} onClick={onButtonCloseClick}>X</button>
+                <button className={styles.closeButton} onClick={onButtonCloseClick}>X</button>
                 <div className={styles.textWrapper}>
                     <h3>Sing in</h3>
                     <p>Welcome back! Please sign in to continue</p>
@@ -52,11 +52,7 @@ export default function LoginModal({ onCloseClick }: ModalProps) {
                             onChange={handleChange}
                         />
 
-                        {error &&
-                            <div className={styles.errorMessage}>
-                                <p>Wrong username or password!</p>
-                            </div>
-                        }
+                        {error && <LoginError />}
 
                     </div>
 
