@@ -61,17 +61,6 @@ p {
     gap: 10px;
 }
 
-.modal .inputsWrapper .errorMessage {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    right: 0;
-}
-
-.modal .inputsWrapper .errorMessage p {
-    color: red;
-}
-
 form input[type='text'], [type='password'] {
     display: flex;
     flex-direction: row;

@@ -1,0 +1,10 @@
+.errorMessage {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.errorMessage p {
+    color: red;
+}
