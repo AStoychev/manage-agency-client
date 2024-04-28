@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useForm } from '../../hooks/useForm';
 import LoginError from '@/components/LoginError/LoginError';
+import Spinner from '@/components/Spinner/Spinner';
+
 import { FcInfo } from "react-icons/fc";
 import styles from './LoginModal.module.css';
 
@@ -10,17 +12,26 @@ type ModalProps = {
 }
 
 export default function LoginModal({ onCloseClick }: ModalProps) {
+    const [spinner, setSpinner] = useState<boolean>(false);
+
     const onButtonCloseClick = () => { onCloseClick() }
     const onClickOutside = () => { onCloseClick() }
 
     const { formData, serverResponce, error, handleChange, handleSubmit } = useForm();
 
+    const onButtonSubmit = (e: any) => {
+        handleSubmit(e)
+        setSpinner(true);
+    }
 
     useEffect(() => {
         if (serverResponce) {
-            onCloseClick()
+            onCloseClick();
         }
-    }, [serverResponce])
+        if(error) {
+            setSpinner(false)
+        }
+    }, [serverResponce, error])
 
     return (
         <div>
@@ -31,7 +42,7 @@ export default function LoginModal({ onCloseClick }: ModalProps) {
                     <h3>Sing in</h3>
                     <p>Welcome back! Please sign in to continue</p>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={(e) => onButtonSubmit(e)}>
                     <div className={styles.inputsWrapper}>
                         <label htmlFor='username'></label>
                         <input
@@ -56,7 +67,12 @@ export default function LoginModal({ onCloseClick }: ModalProps) {
 
                     </div>
 
-                    <button type='submit'>CONTINUE</button>
+                    {!spinner ?
+                        <button type='submit'>CONTINUE</button>
+                        :
+                        <Spinner />
+                    }
+
                     <FcInfo className={styles.icon} title='DEFAULT USERS&#010;username: User password: test &#010;username: Alice password: test &#010;username: John password: test' />
                 </form>
             </div>

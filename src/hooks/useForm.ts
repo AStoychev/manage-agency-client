@@ -47,7 +47,7 @@ export const useForm = () => {
         }
         setTimeout(() => {
             setError(false)
-        }, 1000)
+        }, 3000)
     };
 
     const logout = () => {

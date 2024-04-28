@@ -1,0 +1,14 @@
+.spinner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    position: absolute;
+    font-weight: 600;
+    top: 50px;
+    
+}
