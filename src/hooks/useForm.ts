@@ -39,7 +39,6 @@ export const useForm = () => {
                 throw new Error('Failed to login');
             }
             localStorage.setItem('auth', formData.username);
-            const data = await response.json();
             setServerResponce(true)
             navigate('/main');
         } catch (error) {
